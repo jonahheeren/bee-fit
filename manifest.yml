@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: bee-fit
+  host: bee-fit
+  command: bundle exec rails server -p $PORT
+  disk_quota: 1024M
+  services:
+  - bee-fit-mysql

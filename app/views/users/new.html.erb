@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<html>
+<head>
+	<title>Sign-Up</title>
+	<link href='/stylesheets/style.css' rel='stylesheet'>
+</head>
+<body>
+	<div class="banner">
+		<img src="assets/bee-fit.png" style="height: 40px; width: 40px;">
+		Welcome to Bee-Fit!
+	</div>
+
+	<%= form_for :user, url: '/users' do |f| %>
+
+  <div class="row">
+    <div class="control-group" style="margin-top: 20px;">
+      <div class="controls">
+       <div class="col-xs-2">
+       <center>
+        <%= f.label :name_label, 'Your Name: ', :html => {:class => "control-label"} %>
+       </center>
+       	</div>
+          <%= f.text_field :name, :html => {:class => "control-input-xlarge"}  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="control-group" style="margin-top: 20px;">
+      <div class="controls">
+        <div class="col-xs-2">
+       	 <center>
+       		<%= f.label :email_label, 'Email: ', :html => {:class => "control-label"} %>
+       </center>
+        </div>
+          <%= f.text_field :email, :html => {:class => "control-input-xlarge"}  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="control-group" style="margin-top: 20px;">
+      <div class="controls">
+        <div class="col-xs-2">
+       	 <center>
+       		<%= f.label :password_label, 'Password: ', :html => {:class => "control-label"} %>
+       </center>
+        </div>
+          <%= f.text_field :password, :html => {:class => "control-input-xlarge"}  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="control-group" style="margin-top: 20px;">
+      <div class="controls">
+        <div class="col-xs-2">
+       	 <center>
+            <%= f.label :password_confirm_label, 'Password Confirmation: ', :html => {:class => "control-label"} %>
+       </center>
+        </div>
+          <%= f.text_field :password_confirmation, :html => {:class => "control-input-xlarge"}  %>
+       </div>
+      </div>
+    </div>
+  </div>
+ 
+    <div class="control-group" style="margin-top: 20px; margin-left: 40px;">
+      <!-- Button -->
+      <div class="controls">
+           <%= f.submit "Submit", :html => {:class => "btn btn-success"} %>
+      </div>
+    </div>
+<% end %>
+
+</body>
+</html>

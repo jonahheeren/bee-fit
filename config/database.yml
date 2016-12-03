@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: b5fd798ad6899c
+  password: ddefcadb
+  port: 3306
+  host: us-cdbr-iron-east-04.cleardb.net
+
+development:
+  <<: *default
+  database: ad_9f9972002afc06b
+
+test:
+  <<: *default
+  database: ad_9f9972002afc06b
