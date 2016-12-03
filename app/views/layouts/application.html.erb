@@ -4,11 +4,17 @@
   <title>Bee-Fit!</title>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <% if current_user %>
-  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
+  <div class="banner">
+    <img src="bee-fit.png" style="height: 40px; width: 40px;">
+    Bee-Fit, Now!
+    <div style="float: right;">
+    <% if current_user %>
+    Hello, <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+    <% else %>
+    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+    <% end %>
+  </div>
+    </div>
 </head>
 <body>
 
