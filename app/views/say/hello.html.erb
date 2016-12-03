@@ -3,14 +3,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<HTML>
-	
-	<HEAD>
-		<TITLE>Bee-fit Now</TITLE>
-		<link href='/stylesheets/style.css' rel='stylesheet'>
-	</HEAD>
+<link href='/stylesheets/style.css' rel='stylesheet'>
 
-	<BODY>
+		<%= form_tag '/login' do %>
 		<div class="container" style="display: inline-block; vertical-align: middle;">
 			<div class="row">
 			<div class="form-group row">
@@ -18,15 +13,13 @@
 					<img class="text-center" src="bee-fit.png" style="margin-top: 20px;">
   				</div>
   				<div class="col-xs-4">
-    				<input class="form-control" type="text" placeholder="Username" id="username" style="margin-top: 100px;">
-    				<input class="form-control" type="password" placeholder="Password" id="password" style="margin-top: 25px;">
+    				<%= text_field_tag :email, nil, class: 'form-control', placeholder: "Username", style: 'margin-top: 100px;' %>
+    				<%= password_field_tag :password, nil, class: 'form-control', placeholder: "Password", style: 'margin-top: 25px;' %>
     				<div style="margin-top: 20px;">
-    					<button type="button" class="btn btn-default btn-md">Login</button>
+    					<%= submit_tag "Login", class: 'btn btn-default btn-md' %>
 						<a type="button" href="/signup" class="btn btn-default btn-md">Sign-Up</a>
     				</div>
     			</div>
 			</div>
 		</div>
-	</BODY>
-
-</HTML>
+		<% end %>

@@ -3,16 +3,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<html>
-<head>
-	<title>Sign-Up</title>
-	<link href='/stylesheets/style.css' rel='stylesheet'>
-</head>
-<body>
-	<div class="banner">
-		<img src="assets/bee-fit.png" style="height: 40px; width: 40px;">
-		Welcome to Bee-Fit!
-	</div>
+<link href='/stylesheets/style.css' rel='stylesheet'>
+
 
 	<%= form_for :user, url: '/users' do |f| %>
 
@@ -76,6 +68,3 @@
       </div>
     </div>
 <% end %>
-
-</body>
-</html>
