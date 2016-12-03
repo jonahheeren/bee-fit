@@ -13,9 +13,9 @@ RailsStarter::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  root to: "say#hello"
+  root to: "fitness_summary#sum"
 
-  get '/home', to: 'say#hello', as: 'home'
+  get '/home', to: 'say#hello', as: 'login'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
