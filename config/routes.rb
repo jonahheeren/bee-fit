@@ -15,7 +15,7 @@ RailsStarter::Application.routes.draw do
 
   root to: "fitness_summary#sum"
 
-  get '/home', to: 'say#hello', as: 'login'
+  get '/home', to: 'say#hello', as: 'home'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
